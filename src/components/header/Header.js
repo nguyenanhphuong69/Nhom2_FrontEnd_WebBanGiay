@@ -1,9 +1,190 @@
-import React from 'react'
+import React from "react";
+import { Fragment } from "react";
+import logo from "../header/logo.JPG";
+import { Link } from "react-router-dom";
+// import {
+//   Collapse,
+//   Navbar,
+//   NavbarBrand,
+//   Nav,
+//   NavItem,
+//   NavLink,
+//   Container,
+// } from "reactstrap";
+// import { Button } from "reactstrap";
+// import "./Header.css";
+import "../../styles/responsive.css";
+import "../../styles/main_styles.css";
+export default class Header extends React.Component {
+  // constructor(props) {
+  //   super(props);
 
-const Header = () => {
-  return (
-    <div>header</div>
-  )
+  //   this.toggle = this.toggle.bind(this);
+  //   this.state = {
+  //     isOpen: false,
+  //   };
+  // }
+  // toggle() {
+  //   this.setState({
+  //     isOpen: !this.state.isOpen,
+  //   });
+  // }
+  render() {
+    return (
+      <Fragment>
+        <div className="super_container">
+          <header className="header trans_300">
+            <div className="top_nav">
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="top_nav_left">
+                      free shipping on all VietNam orders over 50.000VND
+                    </div>
+                  </div>
+                  <div className="col-md-6 text-right">
+                    <div className="top_nav_right">
+                      <ul className="top_nav_menu">
+                        <li className="currency">
+                          <Link href="#">
+                            usd
+                            <i className="bi bi-chevron-down"></i>
+                          </Link>
+                          <ul className="currency_selection">
+                            <li>
+                              <Link href="#">cad</Link>
+                            </li>
+                            <li>
+                              <Link href="#">aud</Link>
+                            </li>
+                            <li>
+                              <Link href="#">eur</Link>
+                            </li>
+                            <li>
+                              <Link href="#">gbp</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="language">
+                          <Link href="#">
+                            English
+                            <i className="bi bi-chevron-down"></i>
+                          </Link>
+                          <ul className="language_selection">
+                            <li>
+                              <Link href="#">French</Link>
+                            </li>
+                            <li>
+                              <Link href="#">Italian</Link>
+                            </li>
+                            <li>
+                              <Link href="#">German</Link>
+                            </li>
+                            <li>
+                              <Link href="#">Spanish</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="account">
+                          <Link href="#">
+                            My Account
+                            <i className="bi bi-chevron-down"></i>
+                          </Link>
+                          <ul className="account_selection">
+                            <li>
+                              <Link href="../FrontEnd/Login/Login.html">
+                                <i
+                                  className="bi bi-box-arrow-in-right"
+                                  aria-hidden="true"
+                                ></i>
+                                Sign In
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="../FrontEnd/Registration/Registration.html">
+                                <i
+                                  className="bi bi-person-fill-add"
+                                  aria-hidden="true"
+                                ></i>
+                                Register
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="main_nav_container">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-12 text-right">
+                    <div className="logo_container">
+                      <Link href="#">
+                        <img src={logo} alt="" />
+                      </Link>
+                    </div>
+                    <nav className="navbar">
+                      <ul className="navbar_menu">
+                        <li>
+                          <Link href="#">home</Link>
+                        </li>
+                        <li>
+                          <Link href="#">shop</Link>
+                        </li>
+                        <li>
+                          <Link href="#">promotion</Link>
+                        </li>
+                        <li>
+                          <Link href="#">pages</Link>
+                        </li>
+                        <li>
+                          <Link href="#">blog</Link>
+                        </li>
+                        <li>
+                          <Link href="contact.html">contact</Link>
+                        </li>
+                      </ul>
+                      <ul className="navbar_user">
+                        <li>
+                          <Link href="#">
+                            <i className="bi bi-search " aria-hidden="true"></i>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="#">
+                            <i className="bi bi-person" aria-hidden="true"></i>
+                          </Link>
+                        </li>
+                        <li className="checkout">
+                          <Link href="#">
+                            <i
+                              className="bi bi-cart-fill"
+                              aria-hidden="true"
+                            ></i>
+                            <span
+                              id="checkout_items"
+                              className="checkout_items"
+                            >
+                              2
+                            </span>
+                          </Link>
+                        </li>
+                      </ul>
+                      <div className="hamburger_container">
+                        <i className="fa fa-bars" aria-hidden="true"></i>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </Fragment>
+    );
+  }
 }
-
-export default Header
