@@ -1,34 +1,11 @@
 import React from "react";
 import { Fragment } from "react";
-import logo from "../header/logo.JPG";
+import logo from "../header/logo2.png";
 import { Link } from "react-router-dom";
-// import {
-//   Collapse,
-//   Navbar,
-//   NavbarBrand,
-//   Nav,
-//   NavItem,
-//   NavLink,
-//   Container,
-// } from "reactstrap";
-// import { Button } from "reactstrap";
-// import "./Header.css";
 import "../../styles/responsive.css";
 import "../../styles/main_styles.css";
-export default class Header extends React.Component {
-  // constructor(props) {
-  //   super(props);
 
-  //   this.toggle = this.toggle.bind(this);
-  //   this.state = {
-  //     isOpen: false,
-  //   };
-  // }
-  // toggle() {
-  //   this.setState({
-  //     isOpen: !this.state.isOpen,
-  //   });
-  // }
+export default class Header extends React.Component {
   render() {
     return (
       <Fragment>
