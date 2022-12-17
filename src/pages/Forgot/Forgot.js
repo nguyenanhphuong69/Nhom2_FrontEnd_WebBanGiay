@@ -18,7 +18,7 @@ const Forgot = () => {
           </div>
           <div class="btn">
              <div class="inner"></div>
-             <button type="submit">submit</button>
+             <button type="submit">submit </button>
           </div>
           <div class="signup-link">
           <Link to="/Login">Login Now</Link>
