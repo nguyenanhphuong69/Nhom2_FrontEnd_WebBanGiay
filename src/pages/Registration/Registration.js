@@ -32,7 +32,7 @@ const Registration = () => {
              <input type="tel" id="phone" name="phone" pattern="[0]{1}[0-9]{4}[0-9]{5}" placeholder="Enter your phone number" required /> 
           </div>
           <div class="input-box">
-            <span class="details">Password</span>
+            <span class="details">Password </span>
             <input type="password" placeholder="Enter your password" required />
           </div>
           <div class="input-box">
