@@ -8,6 +8,7 @@ import Cart from './pages/Cart/Cart';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './components/footer/Footer';
 import Login from './pages/Login/Login';
+import Registration from './pages/Registration/Registration';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/login" element={<Login />} /> 
+            <Route path="/Registration" element={<Registration />} />
           </Routes>
           <Footer/>
       </header>
