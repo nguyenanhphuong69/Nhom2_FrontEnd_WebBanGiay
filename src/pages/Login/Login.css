@@ -32,10 +32,12 @@
     display: none;
   }
   .container{
-    background: rgb(255, 255, 255);
-    width: 410px;
-    padding: 30px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
   }
   #show:checked ~ .container{
     display: block;
@@ -128,3 +130,41 @@
   form .signup-link a:hover{
     text-decoration: underline;
   }
+
+  img.Style{
+    position: absolute;
+      top: 7px;
+      left: 24px;
+      width: 150px;
+      height: 110px;
+  } 
+  h1.Style{
+      font-family: inherit;
+      color: #9f01ea;
+      
+  }
+  img.fb{
+    position: absolute;
+      bottom: 120px;
+      right: 85px;
+      width: 70px;
+      height: 70px;
+  }
+  img.Gg  {
+    position: absolute;
+      bottom: 120px;
+      right: 25px;
+      width: 75px;
+      height: 75px;
+  
+  }
+  
+  @media(max-width: 459px){
+    img.Style{
+      position: absolute;
+      top: 20px;
+      left: -10px;
+      width: 120px;
+      height: 90px;
+      }
+    }

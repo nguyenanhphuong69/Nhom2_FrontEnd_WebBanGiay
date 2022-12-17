@@ -1,5 +1,9 @@
 import React from 'react'
 import "./Login.css"
+import Logo from "../Logo/logo2.png"
+import Fb from "../Logo/facebook.png"
+import Gg from "../Logo/Google.png"
+import { Link } from 'react-router-dom'
 const Login = () => {
   return (
     <div class="center">
@@ -7,26 +11,30 @@ const Login = () => {
          <input type="checkbox" id="show" />
          <div class="container">
             <div class="text">
-               Login
+            <img class="Style" src= {Logo} alt='' /> 
+               <img class="fb" src= {Fb} alt='' />
+               <img class="Gg" src= {Gg} alt='' />
+               <h1 class = "Style">Login</h1>
             </div>
             <form action="#">
                <div class="data">
-                  <label>Email or Phone</label>
-                  <input type="text" required />
+                  
+                  <input type="text" placeholder='Email or Phone' />
                </div>
                <div class="data">
-                  <label>Password</label>
-                  <input type="password" required />
+                  {/* <label>Password</label> */}
+                  <input type="password" placeholder='Password' />
                </div>
                <div class="forgot-pass">
-                  <a href="../Forgot">Forgot Password?</a>
+               <Link to="/Forgot">Forgot Password</Link>
                </div>
                <div class="btn">
                   <div class="inner"></div>
                   <button type="submit">login</button>
                </div>
                <div class="signup-link">
-                  Not a member? <a href="../Registration">Signup now</a>
+                  Not a member? 
+                  <Link to="/Registration">Signup Now</Link>
                </div>
             </form>
          </div>
