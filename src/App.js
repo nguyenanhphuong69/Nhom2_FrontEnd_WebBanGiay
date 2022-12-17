@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound/NotFound';
 import Footer from './components/footer/Footer';
 import Login from './pages/Login/Login';
 import Registration from './pages/Registration/Registration';
+import Forgot from './pages/Forgot/Forgot';
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/login" element={<Login />} /> 
             <Route path="/Registration" element={<Registration />} />
+            <Route path="Forgot" element={< Forgot/>} />
           </Routes>
           <Footer/>
       </header>
