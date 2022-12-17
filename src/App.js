@@ -17,6 +17,9 @@ import Best_Seller from './components/contents/Best_Seller';
 import Benefits from './components/contents/Benefits';
 import Blog from './components/contents/Blog';
 import Sus from './components/contents/Sus';
+import Contact from './pages/contact/Contact';
+import Single from './pages/single/Single';
+import Categories from './pages/categories/Categories';
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
         <Benefits/>
         <Blog/>
         <Sus/>
+        <Contact/>
+        <Single/>
+        <Categories/>
         <Routes>
           {/* ********* User ********* */}
           {/* Login */}
