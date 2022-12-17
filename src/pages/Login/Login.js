@@ -26,7 +26,7 @@ const Login = () => {
                   <input type="password" placeholder='Password' />
                </div>
                <div class="forgot-pass">
-               <Link to="/Forgot">Forgot Password</Link>
+               <Link to="/Forgot">Forgot Password </Link>
                </div>
                <div class="btn">
                   <div class="inner"></div>
@@ -34,7 +34,7 @@ const Login = () => {
                </div>
                <div class="signup-link">
                   Not a member? 
-                  <Link to="/Registration">Signup Now</Link>
+                  <Link to="/Registration">Signup Now </Link>
                </div>
             </form>
          </div>
