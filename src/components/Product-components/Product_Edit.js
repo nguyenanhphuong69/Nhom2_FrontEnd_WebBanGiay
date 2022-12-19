@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 const ProductEdit = () => {
   const { empid } = useParams();
+  console.log(empid);
 
   //const [empdata, empdatachange] = useState({});
 
@@ -12,15 +13,16 @@ const ProductEdit = () => {
         return res.json();
       })
       .then((resp) => {
-        idchange(resp.id);
-        tenspchange(resp.tensp);
-        chitietchange(resp.chitiet);
-        sizechange(resp.size);
-        giachange(resp.gia);
-        public_idchange(resp.public_id);
-        urlchange(resp.url);
-        id_dmchange(resp.id_dm);
-        activechange(resp.isactive);
+        idchange(resp.data[0].id);
+        tenspchange(resp.data[0].tensp);
+        chitietchange(resp.data[0].chitiet);
+        sizechange(resp.data[0].size);
+        giachange(resp.data[0].gia);
+        public_idchange(resp.data[0].public_id);
+        urlchange(resp.data[0].url);
+        id_dmchange(resp.data[0].id_dm);
+        activechange(resp.data[0].isactive);
+        console.log(resp.data[0].tensp);
       })
       .catch((err) => {
         console.log(err.message);
@@ -37,13 +39,14 @@ const ProductEdit = () => {
   const [id_dm, id_dmchange] = useState("");
   const [active, activechange] = useState(true);
   const [validation, valchange] = useState(false);
+  console.log(tensp);
 
   const navigate = useNavigate();
 
   const handlesubmit = (e) => {
     e.preventDefault();
     const empdata = { id, tensp, chitiet, gia, active };
-
+    console.log(empdata, "haha");
     fetch("http://localhost:5000/product/" + empid, {
       method: "PUT",
       headers: { "content-type": "application/json" },
@@ -72,7 +75,7 @@ const ProductEdit = () => {
                     <div className="form-group">
                       <label>ID</label>
                       <input
-                        value={id}
+                        value={empid}
                         disabled="disabled"
                         className="form-control"
                       ></input>
@@ -89,9 +92,9 @@ const ProductEdit = () => {
                         onChange={(e) => tenspchange(e.target.value)}
                         className="form-control"
                       ></input>
-                      {tensp.length === 0 && validation && (
+                      {/* {tensp.length === 0 && validation && (
                         <span className="text-danger">Enter the name</span>
-                      )}
+                      )} */}
                     </div>
                   </div>
 

@@ -17,7 +17,16 @@ const EmpCreate = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    const empdata = { tensp, chitiet, gia, active };
+    const empdata = {
+      tensp,
+      chitiet,
+      size,
+      gia,
+      public_id,
+      url,
+      id_dm,
+      active,
+    };
     console.log(empdata);
     fetch("http://localhost:5000/product", {
       method: "POST",

@@ -75,10 +75,16 @@ const Product = () => {
                     <td>{item.chitiet}</td>
                     <td>{item.gia}</td>
                     <td>
-                      <Link
+                      {/* <Link
                         onClick={() => {
                           LoadEdit(item.id);
                         }}
+                        className="btn btn-success"
+                      >
+                        Edit
+                      </Link> */}
+                      <Link
+                        to={`/product/edit/${item.id}`}
                         className="btn btn-success"
                       >
                         Edit
