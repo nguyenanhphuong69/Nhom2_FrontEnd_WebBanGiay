@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 const ProductEdit = () => {
   const { empid } = useParams();
-  console.log(empid);
+  // console.log(empid);
 
   //const [empdata, empdatachange] = useState({});
 
@@ -22,7 +22,6 @@ const ProductEdit = () => {
         urlchange(resp.data[0].url);
         id_dmchange(resp.data[0].id_dm);
         activechange(resp.data[0].isactive);
-        console.log(resp.data[0].tensp);
       })
       .catch((err) => {
         console.log(err.message);
@@ -39,22 +38,30 @@ const ProductEdit = () => {
   const [id_dm, id_dmchange] = useState("");
   const [active, activechange] = useState(true);
   const [validation, valchange] = useState(false);
-  console.log(tensp);
 
   const navigate = useNavigate();
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    const empdata = { id, tensp, chitiet, gia, active };
+    const empdata = {
+      tensp,
+      chitiet,
+      size,
+      gia,
+      public_id,
+      url,
+      id_dm,
+      active,
+    };
     console.log(empdata, "haha");
     fetch("http://localhost:5000/product/" + empid, {
-      method: "PUT",
+      method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(empdata),
     })
       .then((res) => {
         alert("Saved successfully.");
-        navigate("/");
+        navigate("/product/");
       })
       .catch((err) => {
         console.log(err.message);

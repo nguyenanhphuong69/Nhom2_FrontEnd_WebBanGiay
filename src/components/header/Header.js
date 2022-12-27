@@ -23,47 +23,47 @@ export default class Header extends React.Component {
                     <div className="top_nav_right">
                       <ul className="top_nav_menu">
                         <li className="currency">
-                          <Link href="#">
+                          <Link>
                             usd
                             <i className="bi bi-chevron-down"></i>
                           </Link>
                           <ul className="currency_selection">
                             <li>
-                              <Link href="#">cad</Link>
+                              <Link>cad</Link>
                             </li>
                             <li>
-                              <Link href="#">aud</Link>
+                              <Link>aud</Link>
                             </li>
                             <li>
-                              <Link href="#">eur</Link>
+                              <Link>eur</Link>
                             </li>
                             <li>
-                              <Link href="#">gbp</Link>
+                              <Link>gbp</Link>
                             </li>
                           </ul>
                         </li>
                         <li className="language">
-                          <Link href="#">
+                          <Link>
                             English
                             <i className="bi bi-chevron-down"></i>
                           </Link>
                           <ul className="language_selection">
                             <li>
-                              <Link href="#">French</Link>
+                              <Link>French</Link>
                             </li>
                             <li>
-                              <Link href="#">Italian</Link>
+                              <Link>Italian</Link>
                             </li>
                             <li>
-                              <Link href="#">German</Link>
+                              <Link>German</Link>
                             </li>
                             <li>
-                              <Link href="#">Spanish</Link>
+                              <Link>Spanish</Link>
                             </li>
                           </ul>
                         </li>
                         <li className="account">
-                          <Link href="#">
+                          <Link>
                             My Account
                             <i className="bi bi-chevron-down"></i>
                           </Link>
@@ -100,26 +100,26 @@ export default class Header extends React.Component {
                 <div className="row">
                   <div className="col-lg-12 text-right">
                     <div className="logo_container">
-                      <Link href="#">
+                      <Link>
                         <img src={logo} alt="" />
                       </Link>
                     </div>
                     <nav className="navbar">
                       <ul className="navbar_menu">
                         <li>
-                          <Link href="#">home</Link>
+                          <Link to="/">home</Link>
                         </li>
                         <li>
-                          <Link href="#">shop</Link>
+                          <Link to="/cart">shop</Link>
                         </li>
                         <li>
-                          <Link href="#">promotion</Link>
+                          <Link to="/product">Product</Link>
                         </li>
                         <li>
-                          <Link href="#">pages</Link>
+                          <Link to="/category">Category</Link>
                         </li>
                         <li>
-                          <Link href="#">blog</Link>
+                          <Link>blog</Link>
                         </li>
                         <li>
                           <Link href="contact.html">contact</Link>
@@ -127,17 +127,17 @@ export default class Header extends React.Component {
                       </ul>
                       <ul className="navbar_user">
                         <li>
-                          <Link href="#">
+                          <Link>
                             <i className="bi bi-search " aria-hidden="true"></i>
                           </Link>
                         </li>
                         <li>
-                          <Link href="#">
+                          <Link>
                             <i className="bi bi-person" aria-hidden="true"></i>
                           </Link>
                         </li>
                         <li className="checkout">
-                          <Link href="#">
+                          <Link>
                             <i
                               className="bi bi-cart-fill"
                               aria-hidden="true"

@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const EmpCreate = () => {
+  // const [empdata, empdatachange] = useState(null);
+
   const [id, idchange] = useState("");
   const [tensp, tenspchange] = useState("");
   const [chitiet, chitietchange] = useState("");
@@ -41,6 +43,21 @@ const EmpCreate = () => {
         console.log(err.message);
       });
   };
+
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/category")
+  //     .then((res) => {
+  //       console.log(res, "1");
+  //       return res.json();
+  //     })
+  //     .then((resp) => {
+  //       console.log(resp.data, " 2");
+  //       empdatachange(resp.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.message);
+  //     });
+  // }, []);
 
   return (
     <div>
@@ -94,11 +111,23 @@ const EmpCreate = () => {
                   <div className="col-lg-12">
                     <div className="form-group">
                       <label>Size</label>
-                      <input
+                      {/* <input
                         value={size}
                         onChange={(e) => sizechange(e.target.value)}
                         className="form-control"
-                      ></input>
+                      ></input> */}
+                      <select
+                        name="size"
+                        id="size"
+                        defaultValue={size}
+                        onChange={(e) => sizechange(e.target.value)}
+                      >
+                        <option value="">Choose--</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                      </select>
                     </div>
                   </div>
 
@@ -138,11 +167,24 @@ const EmpCreate = () => {
                   <div className="col-lg-12">
                     <div className="form-group">
                       <label>id_dm</label>
-                      <input
+                      {/* <input
                         value={id_dm}
                         onChange={(e) => id_dmchange(e.target.value)}
                         className="form-control"
-                      ></input>
+                      ></input> */}
+
+                      <select
+                        name="id_dm"
+                        id="id_dm"
+                        defaultValue={id_dm}
+                        onChange={(e) => id_dmchange(e.target.value)}
+                      >
+                        <option value="">Choose--</option>
+                        <option value="16">sp16</option>
+                        <option value="17">sp17</option>
+                        <option value="18">sp18</option>
+                        <option value="19">sp19</option>
+                      </select>
                     </div>
                   </div>
 
